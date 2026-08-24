@@ -58,15 +58,19 @@ export default function HeroSection() {
       <Container>
         <div className="relative z-10 flex min-h-[680px] flex-col justify-between py-14 lg:min-h-[720px] lg:py-16">
           {/* Main hero content */}
-          <div className="max-w-[820px] pt-3 lg:pt-5">
+          <div className="max-w-[950px] pt-3 lg:pt-5">
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8BC0FF]">
               Balance Management Consulting
             </span>
 
-            <h1 className="mt-7 max-w-[820px] text-[3.45rem] font-medium leading-[0.98] tracking-[-0.055em] sm:text-[4.2rem] lg:text-[4.85rem]">
-              Consulting expertise for a
-              <br className="hidden sm:block" />
-              technology-driven world.
+            <h1 className="mt-7 max-w-[950px] text-[3.45rem] font-medium leading-[0.98] tracking-[-0.055em] sm:text-[4.2rem] lg:text-[4.85rem]">
+              <span className="block lg:whitespace-nowrap">
+                Consulting expertise for a
+              </span>
+
+              <span className="block">
+                technology-driven world.
+              </span>
             </h1>
 
             <p className="mt-8 max-w-[660px] text-base leading-8 text-white/75 lg:text-[1.08rem]">
