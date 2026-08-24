@@ -7,7 +7,7 @@ const resources = [
     number: "01",
     title: "Case Studies",
     description:
-      "Explore selected BMC engagements, solutions and business outcomes.",
+      "Explore BMC engagements, solutions and business outcomes.",
     link: "/case-studies",
     action: "Explore",
     type: "case-studies",

@@ -67,15 +67,9 @@ export default function ClientFeedbackSection() {
                 </svg>
               </div>
 
-              {/* Rating & Service Label */}
+              {/* Rating */}
               <div className="mt-7">
                 <StarRating rating={testimonial.rating} />
-
-                {testimonial.service && (
-                  <div className="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
-                    {testimonial.service}
-                  </div>
-                )}
               </div>
 
               {/* Quote */}

@@ -53,30 +53,3 @@ export const expertiseAreas = [
     ],
   },
 ];
-
-export const deliverySteps = [
-  {
-    number: "01",
-    title: "Assess",
-    description:
-      "Understand the operating environment, priorities, constraints and opportunities.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description:
-      "Define the right operating model, solution approach and delivery roadmap.",
-  },
-  {
-    number: "03",
-    title: "Implement",
-    description:
-      "Bring together process, technology and people to move from plan to execution.",
-  },
-  {
-    number: "04",
-    title: "Improve",
-    description:
-      "Measure outcomes, strengthen controls and continuously improve performance.",
-  },
-];

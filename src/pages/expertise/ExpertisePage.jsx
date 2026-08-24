@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import heroImage from "../../assets/images/expertise/expertise-hero.webp";
 import { expertiseAreas } from "./expertiseData.js";
 import HowWeWorkSection from "./sections/HowWeWorkSection.jsx";
@@ -49,8 +51,8 @@ function ExpertiseHero() {
                 <span aria-hidden="true">↓</span>
               </a>
 
-              <a
-                href="mailto:info@balancemc.com"
+              <Link
+                to="/contact"
                 className="
                   inline-flex items-center gap-5 rounded-lg
                   border border-white/20 px-6 py-4 font-medium text-white
@@ -60,7 +62,7 @@ function ExpertiseHero() {
               >
                 Talk to Us
                 <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -246,8 +248,8 @@ function ExpertiseCTA() {
           </p>
         </div>
 
-        <a
-          href="mailto:info@balancemc.com"
+        <Link
+          to="/contact"
           className="
             inline-flex items-center justify-center gap-5
             rounded-lg bg-white px-6 py-4
@@ -257,7 +259,7 @@ function ExpertiseCTA() {
         >
           Talk to Us
           <span aria-hidden="true">→</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

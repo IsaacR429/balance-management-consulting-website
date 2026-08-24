@@ -17,7 +17,7 @@ const processSteps = [
     number: "03",
     title: "Implement",
     description:
-      "Bring together process, technology and people to move from plan to execution.",
+      "Bring together processes, technology and people to move from plan to execution.",
     icon: "implement",
   },
   {
