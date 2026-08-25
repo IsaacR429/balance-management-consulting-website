@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "@fontsource/manrope/400.css";
 @import "@fontsource/manrope/500.css";
 @import "@fontsource/manrope/600.css";
@@ -15,19 +15,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --bmc-navy-950: #020b1c;
-  --bmc-navy-900: #03142e;
-  --bmc-navy-800: #061a3d;
 
-  --bmc-blue-600: #2563eb;
-  --bmc-blue-500: #3b82f6;
-  --bmc-blue-100: #dbeafe;
 
-  --bmc-slate-950: #0f172a;
-  --bmc-slate-700: #334155;
-  --bmc-slate-600: #475569;
-  --bmc-slate-200: #e2e8f0;
-  --bmc-slate-50: #f8fafc;
 }
 
 html {

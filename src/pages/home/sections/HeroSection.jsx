@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Container from "../../../components/ui/Container.jsx";
-import heroVideo from "../../../assets/video/bmc-hero.mp4";
+import heroVideo from "../../../assets/video/balance-hero.mp4";
 
 function ArrowIcon({ className = "" }) {
   return (
