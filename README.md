@@ -39,6 +39,8 @@ Northframe is presented separately as Balance's operational assurance and govern
 - Vercel
 
 ## Project Structure
+
+```text
 src/
 |-- app/
 |   |-- App.jsx
