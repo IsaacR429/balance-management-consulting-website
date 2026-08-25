@@ -39,40 +39,39 @@ Northframe is presented separately as Balance's operational assurance and govern
 - Vercel
 
 ## Project Structure
-
-    src/
-    â”œâ”€â”€ app/
-    â”‚   â”œâ”€â”€ App.jsx
-    â”‚   â””â”€â”€ router.jsx
-    â”‚
-    â”œâ”€â”€ assets/
-    â”‚   â”œâ”€â”€ branding/
-    â”‚   â”œâ”€â”€ images/
-    â”‚   â””â”€â”€ video/
-    â”‚
-    â”œâ”€â”€ components/
-    â”‚   â”œâ”€â”€ layout/
-    â”‚   â””â”€â”€ ui/
-    â”‚
-    â”œâ”€â”€ data/
-    â”‚   â”œâ”€â”€ navigation.js
-    â”‚   â””â”€â”€ testimonials.js
-    â”‚
-    â”œâ”€â”€ pages/
-    â”‚   â”œâ”€â”€ about/
-    â”‚   â”œâ”€â”€ case-studies/
-    â”‚   â”œâ”€â”€ contact/
-    â”‚   â”œâ”€â”€ expertise/
-    â”‚   â”œâ”€â”€ home/
-    â”‚   â”œâ”€â”€ impact/
-    â”‚   â”œâ”€â”€ product/
-    â”‚   â”‚   â””â”€â”€ northframe/
-    â”‚   â””â”€â”€ whitepapers/
-    â”‚
-    â”œâ”€â”€ styles/
-    â”‚   â””â”€â”€ index.css
-    â”‚
-    â””â”€â”€ main.jsx
+src/
+|-- app/
+|   |-- App.jsx
+|   `-- router.jsx
+|
+|-- assets/
+|   |-- branding/
+|   |-- images/
+|   `-- video/
+|
+|-- components/
+|   |-- layout/
+|   `-- ui/
+|
+|-- data/
+|   |-- navigation.js
+|   `-- testimonials.js
+|
+|-- pages/
+|   |-- about/
+|   |-- case-studies/
+|   |-- contact/
+|   |-- expertise/
+|   |-- home/
+|   |-- impact/
+|   |-- product/
+|   |   `-- northframe/
+|   `-- whitepapers/
+|
+|-- styles/
+|   `-- index.css
+|
+`-- main.jsx
 
 Each major page is organized as an independent feature area containing its page component, page-specific data, and section components.
 
