@@ -55,7 +55,7 @@ function MeasurableImpactSection() {
         <div className="mt-14 border-y border-[#D8E0EB]">
           <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
             {/* Engagement */}
-            <div className="flex min-h-[390px] flex-col justify-between border-b border-[#D8E0EB] py-14 lg:border-b-0 lg:border-r lg:py-16 lg:pr-16">
+            <div className="flex flex-col justify-between border-b border-[#D8E0EB] py-14 lg:min-h-[390px] lg:border-b-0 lg:border-r lg:py-16 lg:pr-16">
               <div>
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold tracking-[0.18em] text-[#2563EB]">
@@ -98,10 +98,8 @@ function MeasurableImpactSection() {
                 <div
                   key={metric.value}
                   className={[
-                    "group flex min-h-[330px] flex-col justify-between py-12 sm:min-h-[390px] sm:px-8 lg:px-10 lg:py-16",
-                    index > 0
-                      ? "border-t border-[#D8E0EB] sm:border-l sm:border-t-0"
-                      : "",
+                    "group flex flex-col justify-between border-t border-[#D8E0EB] py-10 first:border-t-0 sm:min-h-[300px] sm:px-8 sm:py-12 lg:min-h-[390px] lg:px-10 lg:py-16",
+                    index > 0 ? "sm:border-l sm:border-t-0" : "",
                   ].join(" ")}
                 >
                   <div className="flex items-center justify-between">
@@ -120,11 +118,11 @@ function MeasurableImpactSection() {
                   </div>
 
                   <div>
-                    <div className="text-[3.8rem] font-medium leading-none tracking-[-0.065em] text-[#020B1C] lg:text-[4.1rem]">
+                    <div className="text-[3.25rem] font-medium leading-none tracking-[-0.065em] text-[#020B1C] sm:text-[3.8rem] lg:text-[4.1rem]">
                       {metric.value}
                     </div>
 
-                    <p className="mt-7 max-w-[230px] text-[0.95rem] leading-7 text-[#627188]">
+                    <p className="mt-5 max-w-[230px] text-[0.95rem] leading-7 text-[#627188] sm:mt-7">
                       {metric.label}
                     </p>
                   </div>

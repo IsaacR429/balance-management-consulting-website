@@ -25,12 +25,12 @@ function AboutHeroSection() {
               About Balance
             </p>
 
-            <h1 className="mt-7 max-w-[820px] text-[3rem] font-medium leading-[1.02] tracking-[-0.055em] sm:text-[3.8rem] lg:text-[4.4rem]">
+            <h1 className="mt-7 max-w-[820px] text-[2.7rem] font-medium leading-[1.02] tracking-[-0.055em] sm:text-[3.8rem] lg:text-[4.4rem]">
               Where technology
               <br />
               ambition meets
               <br />
-              human judgment.
+              <span className="whitespace-nowrap">human judgment.</span>
             </h1>
           </div>
 

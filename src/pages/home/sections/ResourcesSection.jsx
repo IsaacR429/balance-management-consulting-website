@@ -210,7 +210,7 @@ export default function ResourcesSection() {
           {/* Main resources area */}
           <div className="grid lg:grid-cols-[1.15fr_0.95fr_0.95fr_0.95fr]">
             {/* Intro */}
-            <div className="flex min-h-[280px] flex-col justify-between border-b border-white/10 p-9 lg:min-h-[320px] lg:border-b-0 lg:border-r lg:p-12">
+            <div className="flex min-h-[270px] flex-col justify-between border-b border-white/10 p-9 sm:min-h-[300px] lg:min-h-[320px] lg:border-b-0 lg:border-r lg:p-12">
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#69A7FF]">
                   Resources
@@ -235,7 +235,7 @@ export default function ResourcesSection() {
                 key={resource.number}
                 to={resource.link}
                 className="
-                  group relative flex min-h-[280px] flex-col
+                  group relative flex min-h-[260px] flex-col
                   border-b border-white/10 p-9
                   text-white no-underline
                   transition-colors duration-300
@@ -245,6 +245,7 @@ export default function ResourcesSection() {
                   focus-visible:outline-2
                   focus-visible:outline-inset
                   focus-visible:outline-[#69A7FF]
+                  sm:min-h-[290px]
                   lg:min-h-[320px]
                   lg:border-b-0 lg:border-r
                   lg:last:border-r-0 lg:p-10
@@ -272,7 +273,7 @@ export default function ResourcesSection() {
                     {resource.title}
                   </h3>
 
-                  <p className="mt-5 text-[0.95rem] leading-7 text-[#91A5C1] lg:min-h-[84px]">
+                  <p className="mt-5 text-[0.95rem] leading-7 text-[#91A5C1] sm:min-h-[84px]">
                     {resource.description}
                   </p>
 

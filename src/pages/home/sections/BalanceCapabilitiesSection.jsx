@@ -54,7 +54,7 @@ function BalanceCapabilitiesSection() {
               <article
                 key={capability.number}
                 className={[
-                  "group relative min-h-[330px] py-10 sm:py-12 lg:px-12 lg:py-12",
+                  "group relative py-10 sm:py-12 lg:min-h-[330px] lg:px-12 lg:py-12",
                   leftColumn ? "lg:pr-16" : "lg:pl-16",
                   !leftColumn ? "lg:border-l lg:border-[#D8E0EB]" : "",
                   index < balanceCapabilities.length - 1

@@ -77,7 +77,7 @@ function IndustriesSection() {
             <article
               key={industry.number}
               className={[
-                "group relative flex min-h-[420px] flex-col py-10 lg:px-10 lg:py-12 xl:px-12",
+                "group relative flex flex-col py-10 lg:min-h-[420px] lg:px-10 lg:py-12 xl:px-12",
                 index < industries.length - 1
                   ? "border-b border-white/10 lg:border-b-0"
                   : "",

@@ -90,12 +90,8 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="mt-7 max-w-[950px] text-[3.45rem] font-medium leading-[0.98] tracking-[-0.055em] sm:text-[4.2rem] lg:text-[4.85rem]">
-              <span className="block lg:whitespace-nowrap">
-                Transformation built for a
-              </span>
-
-              <span className="block">more demanding world.</span>
+            <h1 className="mt-7 max-w-[950px] text-balance text-[2.75rem] font-medium leading-[1] tracking-[-0.05em] sm:text-[3.6rem] lg:text-[4.85rem]">
+              Transformation built for a more demanding world.
             </h1>
 
             <p className="mt-8 max-w-[660px] text-base leading-8 text-white/75 lg:text-[1.08rem]">
@@ -105,11 +101,11 @@ export default function HeroSection() {
             </p>
 
             {/* CTAs */}
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 to="/expertise"
                 className="
-                  group inline-flex items-center justify-between
+                  group inline-flex w-full items-center justify-between
                   gap-8 rounded-xl bg-white px-6 py-4
                   font-medium text-[#020B1C] no-underline
                   transition-colors duration-300
@@ -118,6 +114,7 @@ export default function HeroSection() {
                   focus-visible:outline-2
                   focus-visible:outline-offset-2
                   focus-visible:outline-[#79ACFF]
+                  sm:w-auto
                 "
               >
                 Explore Our Expertise
@@ -134,7 +131,7 @@ export default function HeroSection() {
               <Link
                 to="/contact"
                 className="
-                  group inline-flex items-center justify-between
+                  group inline-flex w-full items-center justify-between
                   gap-8 rounded-xl border border-white/25
                   bg-white/[0.04] px-6 py-4
                   font-medium text-white no-underline
@@ -145,6 +142,7 @@ export default function HeroSection() {
                   focus-visible:outline-2
                   focus-visible:outline-offset-2
                   focus-visible:outline-[#79ACFF]
+                  sm:w-auto
                 "
               >
                 Talk to Us

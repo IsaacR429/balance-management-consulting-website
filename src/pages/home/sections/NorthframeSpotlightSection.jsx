@@ -70,7 +70,7 @@ function NorthframeSpotlightSection() {
         </div>
 
         {/* Product stage */}
-        <div className="relative mt-12 overflow-hidden rounded-[30px] bg-[#020B1C] text-white lg:mt-14">
+        <div className="relative mt-12 overflow-hidden rounded-[22px] bg-[#020B1C] text-white sm:rounded-[30px] lg:mt-14">
           {/* Background image */}
           <img
             src={northframeBackground}
@@ -109,7 +109,7 @@ function NorthframeSpotlightSection() {
 
           <div className="relative grid lg:grid-cols-[0.92fr_1.08fr]">
             {/* Product identity */}
-            <div className="flex min-h-[460px] flex-col justify-between border-b border-white/10 p-9 sm:p-12 lg:border-b-0 lg:border-r lg:p-14 xl:p-16">
+            <div className="flex min-h-[420px] flex-col justify-between border-b border-white/10 p-7 sm:min-h-[460px] sm:p-12 lg:border-b-0 lg:border-r lg:p-14 xl:p-16">
               <div>
                 <div className="flex items-center justify-between">
                   <span className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#79ACFF]">
@@ -122,10 +122,10 @@ function NorthframeSpotlightSection() {
                 <img
                   src={northframeLogo}
                   alt="Northframe"
-                  className="mt-10 h-auto w-[210px] object-contain sm:w-[250px]"
+                  className="mt-9 h-auto w-[175px] object-contain sm:w-[230px] lg:w-[250px]"
                 />
 
-                <h3 className="mt-10 max-w-[620px] text-[2.35rem] font-medium leading-[1.08] tracking-[-0.045em] sm:text-[2.8rem]">
+                <h3 className="mt-8 max-w-[620px] text-[2rem] font-medium leading-[1.08] tracking-[-0.045em] sm:mt-10 sm:text-[2.5rem] lg:text-[2.8rem]">
                   Continuous operational assurance.
                   <br />
                   Confident decisions.
@@ -151,7 +151,7 @@ function NorthframeSpotlightSection() {
             </div>
 
             {/* Platform architecture */}
-            <div className="flex min-h-[460px] flex-col p-9 sm:p-12 lg:p-14 xl:p-16">
+            <div className="flex flex-col p-7 sm:p-10 lg:min-h-[460px] lg:p-14 xl:p-16">
               <div>
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#7186A3]">
                   Platform Intelligence
