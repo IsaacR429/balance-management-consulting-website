@@ -1,6 +1,12 @@
 import Container from "../../../components/ui/Container.jsx";
 import { testimonials } from "../../../data/testimonials.js";
 
+const highlightsById = {
+  "01": ["Responsiveness", "Professionalism", "Commitment"],
+  "02": ["Applied AI", "Model Development", "Business Value"],
+  "03": ["Data Clarity", "Decision Intelligence", "Operational Insight"],
+};
+
 function QuoteMark() {
   return (
     <svg
@@ -14,8 +20,6 @@ function QuoteMark() {
 }
 
 function ClientFeedbackSection() {
-  const featured = testimonials[0];
-
   return (
     <section className="relative overflow-hidden bg-[#020B1C] text-white">
       {/* Architectural grid */}
@@ -52,58 +56,82 @@ function ClientFeedbackSection() {
 
           <p className="max-w-[610px] text-[1.05rem] leading-8 text-[#AFC0D7] lg:justify-self-end">
             Perspectives from organizations partnering with Balance across
-            transformation, technology and complex business change.
+            transformation, machine learning and data-driven business change.
           </p>
         </div>
 
-        {/* Featured client perspective */}
-        <article className="grid lg:grid-cols-[1.28fr_0.72fr]">
-          {/* Quote */}
-          <div className="border-b border-white/10 py-12 lg:min-h-[500px] lg:border-b-0 lg:border-r lg:py-16 lg:pr-16">
-            <div className="flex items-start justify-between">
-              <QuoteMark />
+        {/* Testimonials */}
+        <div>
+          {testimonials.map((testimonial, index) => {
+            const highlights = highlightsById[testimonial.id] ?? [];
 
-              <span className="text-xs font-semibold tracking-[0.18em] text-[#6FA8FF]">
-                01
-              </span>
-            </div>
+            return (
+              <article
+                key={testimonial.id}
+                className={`grid lg:grid-cols-[1.28fr_0.72fr] ${
+                  index !== testimonials.length - 1
+                    ? "border-b border-white/10"
+                    : ""
+                }`}
+              >
+                {/* Quote */}
+                <div className="border-b border-white/10 py-10 lg:min-h-[380px] lg:border-b-0 lg:border-r lg:py-12 lg:pr-16">
+                  <div className="flex items-start justify-between">
+                    <QuoteMark />
 
-            <blockquote className="mt-12 max-w-[850px] text-[1.55rem] font-normal leading-[1.55] tracking-[-0.025em] text-[#F1F5F9] sm:text-[1.8rem] lg:text-[1.95rem]">
-              {featured.quote}
-            </blockquote>
-          </div>
+                    <span className="text-xs font-semibold tracking-[0.18em] text-[#6FA8FF]">
+                      {testimonial.id}
+                    </span>
+                  </div>
 
-          {/* Client identity */}
-          <div className="flex flex-col justify-between py-12 lg:min-h-[500px] lg:py-16 lg:pl-16">
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#79ACFF]">
-                  Client Perspective
-                </span>
+                  {testimonial.category && (
+                    <p className="mt-10 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#79ACFF]">
+                      {testimonial.category}
+                    </p>
+                  )}
 
-                <span className="h-px w-10 bg-[#6FA8FF]/50" />
-              </div>
+                  <blockquote className="mt-8 max-w-[850px] text-[1.25rem] font-normal leading-[1.55] tracking-[-0.025em] text-[#F1F5F9] sm:text-[1.45rem] lg:text-[1.55rem]">
+                    {testimonial.quote}
+                  </blockquote>
+                </div>
 
-              <p className="mt-10 max-w-[380px] text-[1.15rem] font-medium leading-8 text-[#D5DFEB]">
-                Responsiveness.
-                <br />
-                Professionalism.
-                <br />
-                Commitment.
-              </p>
-            </div>
+                {/* Client identity */}
+                <div className="flex flex-col justify-between py-10 lg:min-h-[380px] lg:py-12 lg:pl-16">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#79ACFF]">
+                        {testimonial.category || "Client Perspective"}
+                      </span>
 
-            <div className="mt-16 border-t border-white/10 pt-8">
-              <p className="text-[1.1rem] font-medium text-white">
-                {featured.name}
-              </p>
+                      <span className="h-px w-10 bg-[#6FA8FF]/50" />
+                    </div>
 
-              <p className="mt-2 max-w-[360px] text-[0.92rem] leading-6 text-[#8195B0]">
-                {featured.role}
-              </p>
-            </div>
-          </div>
-        </article>
+                    <div className="mt-10 space-y-2">
+                      {highlights.map((highlight) => (
+                        <p
+                          key={highlight}
+                          className="text-[1.15rem] font-medium leading-8 text-[#D5DFEB]"
+                        >
+                          {highlight}.
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-10 border-t border-white/10 pt-8">
+                    <p className="text-[1.1rem] font-medium text-white">
+                      {testimonial.name}
+                    </p>
+
+                    <p className="mt-2 max-w-[360px] text-[0.92rem] leading-6 text-[#8195B0]">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </Container>
     </section>
   );
