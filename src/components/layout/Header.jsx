@@ -1,8 +1,28 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+import balanceLogo from "../../assets/branding/balance-logo.svg";
 import { primaryNavigation } from "../../data/navigation.js";
 import Container from "../ui/Container.jsx";
+
+function ArrowIcon({ className = "" }) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <path
+        d="M4 10H15M11 6L15 10L11 14"
+        stroke="currentColor"
+        strokeWidth="1.35"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,14 +31,14 @@ function Header() {
     [
       "group relative flex h-full items-center",
       "text-[0.94rem] font-medium tracking-[-0.01em]",
-      "transition-colors duration-200",
-      "after:absolute after:bottom-[16px] after:left-1/2",
-      "after:h-[1.5px] after:-translate-x-1/2",
+      "transition-colors duration-300",
+      "after:absolute after:bottom-[16px] after:left-0",
+      "after:h-px after:w-full after:origin-center",
       "after:bg-[#2563EB]",
-      "after:transition-all after:duration-300",
+      "after:transition-transform after:duration-300 after:ease-out",
       isActive
-        ? "text-[#0F172A] after:w-full"
-        : "text-[#526078] after:w-0 hover:text-[#0F172A] hover:after:w-full",
+        ? "text-[#0F172A] after:scale-x-100"
+        : "text-[#526078] after:scale-x-0 hover:text-[#0F172A] hover:after:scale-x-100",
     ].join(" ");
 
   return (
@@ -28,38 +48,28 @@ function Header() {
           {/* Brand */}
           <Link
             to="/"
-            aria-label="Balance Management Consulting homepage"
-            className="group flex shrink-0 items-center gap-3 no-underline"
+            aria-label="Balance homepage"
+            className="group flex min-w-0 shrink-0 items-center no-underline sm:min-w-[205px]"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div
+            <img
+              src={balanceLogo}
+              alt="Balance"
               className="
-                flex h-10 w-10 items-center justify-center
-                rounded-full border border-[#BFDBFE]
-                bg-[#EFF6FF]
-                text-sm font-semibold text-[#2563EB]
-                transition-colors duration-200
-                group-hover:border-[#93C5FD]
+                h-[58px] w-auto
+                object-contain
+                transition-opacity duration-300
+                group-hover:opacity-[0.92]
+                sm:h-[64px]
+                lg:h-[70px]
               "
-            >
-              B
-            </div>
-
-            <div className="hidden sm:block">
-              <div className="text-[1.02rem] font-semibold leading-none tracking-[-0.035em] text-[#020B1C]">
-                Balance
-              </div>
-
-              <div className="mt-1 text-[9.5px] font-semibold uppercase leading-none tracking-[0.14em] text-[#64748B]">
-                Management Consulting
-              </div>
-            </div>
+            />
           </Link>
 
           {/* Desktop navigation */}
           <nav
             aria-label="Primary navigation"
-            className="hidden h-full items-center gap-8 xl:gap-9 lg:flex"
+            className="hidden h-full items-center gap-8 lg:flex xl:gap-9"
           >
             {primaryNavigation.map((item) => (
               <NavLink
@@ -83,8 +93,7 @@ function Header() {
                 bg-[#020F2B] px-6
                 text-[0.95rem] font-medium text-white
                 no-underline
-                transition-all duration-300
-                hover:-translate-y-0.5
+                transition-colors duration-300
                 hover:bg-[#061A3D]
                 focus-visible:outline
                 focus-visible:outline-2
@@ -94,12 +103,13 @@ function Header() {
             >
               Talk to Us
 
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
+              <ArrowIcon
+                className="
+                  h-[18px] w-[18px]
+                  transition-transform duration-300
+                  group-hover:translate-x-1
+                "
+              />
             </Link>
           </div>
 
@@ -115,10 +125,14 @@ function Header() {
             onClick={() => setMobileMenuOpen((current) => !current)}
             className="
               flex h-11 w-11 items-center justify-center
-              rounded-xl border border-[#DDE5F0]
+              rounded-lg border border-[#DDE5F0]
               bg-white text-[#020B1C]
-              transition-colors duration-200
-              hover:bg-[#F8FAFC]
+              transition-colors duration-300
+              hover:bg-[#F7F9FC]
+              focus-visible:outline
+              focus-visible:outline-2
+              focus-visible:outline-offset-2
+              focus-visible:outline-[#2563EB]
               lg:hidden
             "
           >
@@ -131,9 +145,7 @@ function Header() {
                 className={[
                   "absolute left-0 top-[2px] h-px w-5 bg-current",
                   "transition-all duration-300",
-                  mobileMenuOpen
-                    ? "top-[7px] rotate-45"
-                    : "",
+                  mobileMenuOpen ? "top-[7px] rotate-45" : "",
                 ].join(" ")}
               />
 
@@ -141,9 +153,7 @@ function Header() {
                 className={[
                   "absolute left-0 top-[7px] h-px w-5 bg-current",
                   "transition-opacity duration-200",
-                  mobileMenuOpen
-                    ? "opacity-0"
-                    : "opacity-100",
+                  mobileMenuOpen ? "opacity-0" : "opacity-100",
                 ].join(" ")}
               />
 
@@ -151,9 +161,7 @@ function Header() {
                 className={[
                   "absolute left-0 top-[12px] h-px w-5 bg-current",
                   "transition-all duration-300",
-                  mobileMenuOpen
-                    ? "top-[7px] -rotate-45"
-                    : "",
+                  mobileMenuOpen ? "top-[7px] -rotate-45" : "",
                 ].join(" ")}
               />
             </div>
@@ -164,18 +172,16 @@ function Header() {
       {/* Mobile navigation */}
       <div
         className={[
-          "overflow-hidden border-t border-[#E5EAF1]",
-          "bg-white transition-all duration-300 lg:hidden",
+          "overflow-hidden border-t bg-white",
+          "transition-[max-height,opacity,border-color] duration-300 ease-out",
+          "lg:hidden",
           mobileMenuOpen
-            ? "max-h-[520px] opacity-100"
-            : "max-h-0 border-t-transparent opacity-0",
+            ? "max-h-[520px] border-[#E5EAF1] opacity-100"
+            : "max-h-0 border-transparent opacity-0",
         ].join(" ")}
       >
         <Container>
-          <nav
-            aria-label="Mobile navigation"
-            className="py-4"
-          >
+          <nav aria-label="Mobile navigation" className="py-4">
             {primaryNavigation.map((item) => (
               <NavLink
                 key={item.href}
@@ -184,10 +190,10 @@ function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
                   [
-                    "flex items-center justify-between",
+                    "group flex items-center justify-between",
                     "border-b border-[#EEF2F6]",
                     "py-4 text-[0.95rem] font-medium",
-                    "transition-colors duration-200",
+                    "transition-colors duration-300",
                     isActive
                       ? "text-[#2563EB]"
                       : "text-[#475569] hover:text-[#020B1C]",
@@ -196,12 +202,14 @@ function Header() {
               >
                 <span>{item.label}</span>
 
-                <span
-                  aria-hidden="true"
-                  className="text-[#94A3B8]"
-                >
-                  →
-                </span>
+                <ArrowIcon
+                  className="
+                    h-[17px] w-[17px] text-[#94A3B8]
+                    transition-all duration-300
+                    group-hover:translate-x-1
+                    group-hover:text-[#2563EB]
+                  "
+                />
               </NavLink>
             ))}
 
@@ -209,16 +217,24 @@ function Header() {
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="
-                mt-5 flex items-center justify-between
+                group mt-5 flex items-center justify-between
                 rounded-xl bg-[#020F2B]
                 px-5 py-4
                 text-[0.95rem] font-medium
                 text-white no-underline
+                transition-colors duration-300
+                hover:bg-[#061A3D]
               "
             >
               Talk to Us
 
-              <span aria-hidden="true">→</span>
+              <ArrowIcon
+                className="
+                  h-[18px] w-[18px]
+                  transition-transform duration-300
+                  group-hover:translate-x-1
+                "
+              />
             </Link>
           </nav>
         </Container>

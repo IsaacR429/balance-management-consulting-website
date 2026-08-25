@@ -20,7 +20,7 @@ export const testimonials = [
     rating: 5,
     quote:
       "Every individual we have worked with at Balance Management Consulting has been friendly, professional and gone above and beyond to ensure our satisfaction. They were willing to go on our learning journey through all the twists and turns and never said no to our many last minute changes and requests.",
-    name: "Arvind Sukhija (Loreal)",
+    name: "Arvind Sukhija (L'Oréal)",
     role: "Learning & Development Head",
   },
 ];

@@ -1,6 +1,8 @@
 import HeroSection from "./sections/HeroSection.jsx";
+import BalanceCapabilitiesSection from "./sections/BalanceCapabilitiesSection.jsx";
 import IndustriesSection from "./sections/IndustriesSection.jsx";
-import ExpertisePreviewSection from "./sections/ExpertisePreviewSection.jsx";
+import NorthframeSpotlightSection from "./sections/NorthframeSpotlightSection.jsx";
+import MeasurableImpactSection from "./sections/MeasurableImpactSection.jsx";
 import ClientFeedbackSection from "./sections/ClientFeedbackSection.jsx";
 import ResourcesSection from "./sections/ResourcesSection.jsx";
 
@@ -8,8 +10,10 @@ function HomePage() {
   return (
     <>
       <HeroSection />
+      <BalanceCapabilitiesSection />
       <IndustriesSection />
-      <ExpertisePreviewSection />
+      <NorthframeSpotlightSection />
+      <MeasurableImpactSection />
       <ClientFeedbackSection />
       <ResourcesSection />
     </>

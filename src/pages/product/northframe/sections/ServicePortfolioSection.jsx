@@ -103,7 +103,7 @@ function ServicePortfolioSection() {
               <span className="h-px w-8 bg-blue-200" />
 
               <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400">
-                BMC delivery service
+                Balance delivery service
               </span>
             </div>
 

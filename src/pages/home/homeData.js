@@ -1,77 +1,80 @@
 export const industries = [
   {
-    id: "01",
+    number: "01",
     title: "Banking",
     description:
-      "Modernise operations, strengthen resilience and improve digital service delivery.",
-    icon: "banking",
-    theme: "dark",
-  },
-  {
-    id: "02",
-    title: "Insurance",
-    description:
-      "Connect technology, automation and operational insight across the insurance journey.",
-    icon: "insurance",
-    theme: "dark",
-  },
-  {
-    id: "03",
-    title: "Capital Markets",
-    description:
-      "Improve control, data visibility and operational efficiency in complex environments.",
-    icon: "markets",
-    theme: "dark",
-  },
-  {
-    id: "04",
-    title: "Manufacturing",
-    description:
-      "Build more connected, scalable and efficient operating environments.",
-    icon: "manufacturing",
-    theme: "light",
-  },
-  {
-    id: "05",
-    title: "Education",
-    description:
-      "Support flexible digital learning and modern service delivery.",
-    icon: "education",
-    theme: "light",
-  },
-  {
-    id: "06",
-    title: "Communication",
-    description:
-      "Strengthen digital engagement, connectivity and operational agility.",
-    icon: "communication",
-    theme: "light",
-  },
-];
-
-export const expertiseAreas = [
-  {
-    number: "01",
-    title: "Strategy & Transformation",
-    description:
-      "Connect business priorities with practical transformation programmes.",
+      "Modernize critical technology while strengthening operational resilience, governance and regulatory confidence.",
+    focus: [
+      "Operational resilience",
+      "Technology governance",
+      "Controlled transformation",
+    ],
   },
   {
     number: "02",
-    title: "Operations & Governance",
+    title: "Insurance",
     description:
-      "Improve operational performance, control and execution.",
+      "Connect technology, data and automation across increasingly digital operations while maintaining control and customer trust.",
+    focus: [
+      "Connected operations",
+      "AI & automation",
+      "Risk & compliance",
+    ],
   },
   {
     number: "03",
-    title: "Technology & Cybersecurity",
+    title: "Capital Markets",
     description:
-      "Modernise critical technology while strengthening resilience and security.",
+      "Strengthen visibility, control and technology execution across complex, highly interconnected financial environments.",
+    focus: [
+      "Technology risk",
+      "Operational control",
+      "Resilience & recovery",
+    ],
+  },
+];
+
+export const balanceCapabilities = [
+  {
+    number: "01",
+    title: "Transform Technology",
+    description:
+      "Modernize architecture, cloud, data platforms and operating models to create scalable foundations for change.",
+    services: [
+      "Technology Transformation",
+      "Data & Cloud Modernization",
+    ],
+  },
+  {
+    number: "02",
+    title: "Automate Operations",
+    description:
+      "Apply enterprise AI and automation while strengthening the discipline required to move change safely into production.",
+    services: [
+      "AI & Automation",
+      "Change & Release Management",
+    ],
+  },
+  {
+    number: "03",
+    title: "Govern & Control",
+    description:
+      "Strengthen decision rights, accountability, controls and regulatory readiness across complex technology environments.",
+    services: [
+      "Technology Governance",
+      "Audit & Regulatory Compliance",
+    ],
   },
   {
     number: "04",
-    title: "AI, Data & Automation",
+    title: "Protect & Recover",
     description:
-      "Apply intelligent technology where it can reduce friction and improve decisions.",
+      "Reduce technology risk and strengthen recovery readiness through security controls, testing and resilience planning.",
+    services: [
+      "Cybersecurity & Technology Risk",
+      "Disaster Recovery & Resilience",
+    ],
   },
 ];
+
+

@@ -1,27 +1,33 @@
 import Container from "../../../components/ui/Container.jsx";
 
-export default function CaseStudiesIntroSection() {
+function CaseStudiesIntroSection() {
   return (
-    <section className="case-studies-intro">
+    <section className="bg-white py-16 lg:py-20">
       <Container>
-        <div className="case-studies-intro__layout">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end lg:gap-24">
           <div>
-            <span className="section-eyebrow">CASE STUDIES</span>
+            <div className="mb-6 h-px w-11 bg-[#2563EB]" />
 
-            <h1>
-              Work shaped by real
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#2563EB]">
+              Case Studies
+            </p>
+
+            <h1 className="mt-6 max-w-[760px] text-[3rem] font-medium leading-[1.02] tracking-[-0.055em] text-[#020B1C] sm:text-[3.7rem] lg:text-[4.1rem]">
+              Transformation
               <br />
-              operating challenges.
+              in practice.
             </h1>
           </div>
 
-          <p>
-            Explore BMC engagements across technology, cybersecurity,
-            operations, financial services and learning - and how practical
-            expertise is applied to real business priorities.
+          <p className="max-w-[600px] text-[1.05rem] leading-8 text-[#586981] lg:justify-self-end">
+            Balance engagements across cybersecurity, technology
+            transformation, resilience, operations and complex enterprise
+            delivery.
           </p>
         </div>
       </Container>
     </section>
   );
 }
+
+export default CaseStudiesIntroSection;

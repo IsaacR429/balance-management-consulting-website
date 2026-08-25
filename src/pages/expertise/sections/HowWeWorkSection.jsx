@@ -22,6 +22,13 @@ const processSteps = [
   },
   {
     number: "04",
+    title: "Operate",
+    description:
+      "Run and support the environment with visibility, control and operational discipline.",
+    icon: "operate",
+  },
+  {
+    number: "05",
     title: "Improve",
     description:
       "Measure outcomes, strengthen controls and continuously improve performance.",
@@ -149,6 +156,48 @@ function ImplementIcon() {
   );
 }
 
+function OperateIcon() {
+  return (
+    <svg
+      viewBox="0 0 72 72"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      className="h-full w-full"
+    >
+      <rect
+        x="15"
+        y="17"
+        width="42"
+        height="12"
+        rx="3"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      />
+
+      <rect
+        x="15"
+        y="43"
+        width="42"
+        height="12"
+        rx="3"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      />
+
+      <circle cx="22" cy="23" r="2" fill="currentColor" />
+      <circle cx="22" cy="49" r="2" fill="currentColor" />
+
+      <path
+        d="M29 23H48M29 49H48M36 29V43"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 function ImproveIcon() {
   return (
     <svg
@@ -202,6 +251,7 @@ function ProcessIcon({ type }) {
     assess: AssessIcon,
     design: DesignIcon,
     implement: ImplementIcon,
+    operate: OperateIcon,
     improve: ImproveIcon,
   };
 
@@ -212,7 +262,7 @@ function ProcessIcon({ type }) {
 
 export default function HowWeWorkSection() {
   return (
-    <section className="bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+    <section className="bg-white px-6 py-16 sm:px-8 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-[1480px]">
 
         {/* Section heading */}
@@ -225,25 +275,25 @@ export default function HowWeWorkSection() {
             </p>
 
             <h2 className="max-w-[640px] text-[42px] font-medium leading-[1.04] tracking-[-0.045em] text-slate-950 sm:text-[48px] lg:text-[54px]">
-              From business priority to practical execution.
+              From priority to measurable progress.
             </h2>
           </div>
 
           <p className="max-w-[610px] text-[17px] leading-8 text-slate-600 lg:pb-1">
-            BMC brings structure to transformation through a focused delivery
-            approach that connects advisory, implementation and continuous
+            Balance brings focus and momentum to transformation through a practical
+            delivery model that connects advisory, execution and continuous
             improvement.
           </p>
         </div>
 
         {/* Process */}
-        <div className="mt-16 border-t border-slate-200 lg:mt-20">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 border-t border-slate-200 lg:mt-14">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5">
             {processSteps.map((step, index) => (
               <article
                 key={step.number}
                 className={[
-                  "group relative py-10 sm:px-7 lg:min-h-[330px] lg:px-8 lg:py-11",
+                  "group flex flex-col py-9 sm:px-7 lg:min-h-[285px] lg:px-6 lg:py-10 xl:px-8",
                   index % 2 !== 0
                     ? "sm:border-l sm:border-slate-200"
                     : "",
@@ -255,11 +305,11 @@ export default function HowWeWorkSection() {
                     : "",
                 ].join(" ")}
               >
-                {/* Icon */}
-                <div className="mb-8 flex items-start justify-between">
+                {/* Icon + number */}
+                <div className="flex items-start justify-between">
                   <div
                     className="
-                      h-[66px] w-[66px]
+                      h-[46px] w-[46px]
                       text-blue-500
                       transition-transform duration-300
                       group-hover:-translate-y-1
@@ -276,8 +326,8 @@ export default function HowWeWorkSection() {
                 </div>
 
                 {/* Content */}
-                <div className="lg:absolute lg:bottom-10 lg:left-8 lg:right-8">
-                  <h3 className="text-[24px] font-semibold tracking-[-0.025em] text-slate-950">
+                <div className="mt-7">
+                  <h3 className="text-[23px] font-semibold tracking-[-0.025em] text-slate-950">
                     {step.title}
                   </h3>
 
@@ -287,7 +337,7 @@ export default function HowWeWorkSection() {
 
                   <div
                     className="
-                      mt-7 h-px w-8 bg-blue-500
+                      mt-6 h-px w-8 bg-blue-500
                       transition-all duration-300
                       group-hover:w-12
                       motion-reduce:transition-none

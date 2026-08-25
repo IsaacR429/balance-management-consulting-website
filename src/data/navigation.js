@@ -1,6 +1,6 @@
 export const primaryNavigation = [
   {
-    label: "Homepage",
+    label: "Home",
     href: "/",
   },
   {

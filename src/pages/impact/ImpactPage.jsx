@@ -1,15 +1,17 @@
 import ImpactHeroSection from "./sections/ImpactHeroSection.jsx";
+import OutcomeFrameworkSection from "./sections/OutcomeFrameworkSection.jsx";
 import SelectedImpactSection from "./sections/SelectedImpactSection.jsx";
-import FinancialServicesImpactSection from "./sections/FinancialServicesImpactSection.jsx";
 import ImpactCTASection from "./sections/ImpactCTASection.jsx";
 
-export default function ImpactPage() {
-    return (
-        <>
-            <ImpactHeroSection />
-            <SelectedImpactSection />
-            <FinancialServicesImpactSection />
-            <ImpactCTASection />
-        </>
-    );
+function ImpactPage() {
+  return (
+    <>
+      <ImpactHeroSection />
+      <OutcomeFrameworkSection />
+      <SelectedImpactSection />
+      <ImpactCTASection />
+    </>
+  );
 }
+
+export default ImpactPage;

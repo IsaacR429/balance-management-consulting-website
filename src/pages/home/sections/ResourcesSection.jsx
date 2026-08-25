@@ -7,7 +7,7 @@ const resources = [
     number: "01",
     title: "Case Studies",
     description:
-      "Explore BMC engagements, solutions and business outcomes.",
+      "Explore Balance engagements, solutions and business outcomes.",
     link: "/case-studies",
     action: "Explore",
     type: "case-studies",
@@ -25,7 +25,7 @@ const resources = [
     number: "03",
     title: "Our Locations",
     description:
-      "BMC operates from Noida, Mohali and Edmonton.",
+      "Balance operates from Noida, Mohali and Edmonton.",
     link: "/about#locations",
     action: "View Locations",
     type: "locations",
@@ -183,27 +183,46 @@ function ResourceGraphic({ type }) {
   );
 }
 
+function ArrowIcon({ className = "" }) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <path
+        d="M4 10H15M11 6L15 10L11 14"
+        stroke="currentColor"
+        strokeWidth="1.35"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function ResourcesSection() {
   return (
-    <section className="bg-white py-24 lg:py-28">
+    <section className="bg-white py-20">
       <Container>
         <div className="overflow-hidden rounded-[28px] bg-[#020F2B] text-white">
           {/* Main resources area */}
           <div className="grid lg:grid-cols-[1.15fr_0.95fr_0.95fr_0.95fr]">
             {/* Intro */}
-            <div className="flex min-h-[390px] flex-col justify-between border-b border-white/10 p-9 lg:border-b-0 lg:border-r lg:p-12">
+            <div className="flex min-h-[280px] flex-col justify-between border-b border-white/10 p-9 lg:min-h-[320px] lg:border-b-0 lg:border-r lg:p-12">
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#69A7FF]">
                   Resources
                 </span>
 
                 <h2 className="mt-7 max-w-xs text-4xl font-medium leading-[1.05] tracking-[-0.045em]">
-                  Ideas shaped by experience.
+                  Ideas grounded in real-world experience.
                 </h2>
 
                 <p className="mt-7 max-w-xs text-[0.98rem] leading-8 text-[#A9BAD2]">
-                  Explore practical perspectives and examples from BMC&apos;s
-                  work across technology, operations and transformation.
+                  Explore perspectives and examples drawn from Balance&apos;s work across
+                  technology, transformation and operational change.
                 </p>
               </div>
 
@@ -215,14 +234,35 @@ export default function ResourcesSection() {
               <Link
                 key={resource.number}
                 to={resource.link}
-                className="group relative flex min-h-[390px] flex-col border-b border-white/10 p-9 text-white no-underline transition-colors duration-300 last:border-b-0 hover:bg-white/[0.035] lg:border-b-0 lg:border-r lg:last:border-r-0 lg:p-10"
+                className="
+                  group relative flex min-h-[280px] flex-col
+                  border-b border-white/10 p-9
+                  text-white no-underline
+                  transition-colors duration-300
+                  last:border-b-0
+                  hover:bg-white/[0.035]
+                  focus-visible:outline
+                  focus-visible:outline-2
+                  focus-visible:outline-inset
+                  focus-visible:outline-[#69A7FF]
+                  lg:min-h-[320px]
+                  lg:border-b-0 lg:border-r
+                  lg:last:border-r-0 lg:p-10
+                "
               >
                 <div className="flex items-start justify-between">
                   <span className="text-xs font-semibold tracking-[0.18em] text-[#69A7FF]">
                     {resource.number}
                   </span>
 
-                  <div className="opacity-80 transition-transform duration-500 group-hover:translate-x-1">
+                  <div
+                    className="
+                      opacity-75
+                      transition-[opacity,transform] duration-500
+                      group-hover:-translate-y-0.5
+                      group-hover:opacity-100
+                    "
+                  >
                     <ResourceGraphic type={resource.type} />
                   </div>
                 </div>
@@ -232,7 +272,7 @@ export default function ResourcesSection() {
                     {resource.title}
                   </h3>
 
-                  <p className="mt-5 min-h-[84px] text-[0.95rem] leading-7 text-[#91A5C1]">
+                  <p className="mt-5 text-[0.95rem] leading-7 text-[#91A5C1] lg:min-h-[84px]">
                     {resource.description}
                   </p>
 
@@ -241,9 +281,13 @@ export default function ResourcesSection() {
                       {resource.action}
                     </span>
 
-                    <span className="text-[#69A7FF] transition-transform duration-300 group-hover:translate-x-1.5">
-                      →
-                    </span>
+                    <ArrowIcon
+                      className="
+                        h-[18px] w-[18px] text-[#69A7FF]
+                        transition-transform duration-300
+                        group-hover:translate-x-1
+                      "
+                    />
                   </div>
                 </div>
               </Link>
@@ -258,19 +302,33 @@ export default function ResourcesSection() {
               </span>
 
               <h3 className="mt-4 text-2xl font-medium tracking-[-0.03em]">
-                Ready to discuss your priorities?
+                Ready to move your priorities forward?
               </h3>
             </div>
 
             <Link
               to="/contact"
-              className="group inline-flex min-w-[168px] items-center justify-between gap-8 rounded-xl bg-white px-6 py-4 font-medium text-[#020B1C] no-underline transition-transform duration-300 hover:-translate-y-0.5"
+              className="
+                group inline-flex min-w-[168px] items-center justify-between
+                gap-8 rounded-xl bg-white px-6 py-4
+                font-medium text-[#020B1C] no-underline
+                transition-colors duration-300
+                hover:bg-[#F1F5F9]
+                focus-visible:outline
+                focus-visible:outline-2
+                focus-visible:outline-offset-2
+                focus-visible:outline-[#69A7FF]
+              "
             >
               Talk to Us
 
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+              <ArrowIcon
+                className="
+                  h-[18px] w-[18px]
+                  transition-transform duration-300
+                  group-hover:translate-x-1
+                "
+              />
             </Link>
           </div>
         </div>

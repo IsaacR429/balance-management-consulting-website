@@ -4,7 +4,7 @@ export const resources = [
         number: "01",
         title: "Case Studies",
         description:
-            "Explore selected BMC engagements, solutions and business outcomes.",
+            "Explore selected Balance engagements, solutions and business outcomes.",
         label: "Explore",
         href: "/case-studies",
     },
@@ -22,7 +22,7 @@ export const resources = [
         number: "03",
         title: "Our Locations",
         description:
-            "BMC operates from Noida, Mohali and Edmonton.",
+            "Balance operates from Noida, Mohali and Edmonton.",
         label: "View Locations",
         href: "/about#locations",
     },
