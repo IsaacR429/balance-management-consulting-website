@@ -56,12 +56,12 @@ function Header() {
               src={balanceLogo}
               alt="Balance"
               className="
-                h-[58px] w-auto
+                h-[54px] w-auto
                 object-contain
                 transition-opacity duration-300
                 group-hover:opacity-[0.92]
-                sm:h-[64px]
-                lg:h-[70px]
+                sm:h-[60px]
+                lg:h-[64px]
               "
             />
           </Link>
